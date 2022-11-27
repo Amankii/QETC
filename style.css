@@ -1,0 +1,1353 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #333;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    background-color: rgba(51, 51, 51, 0.438);
+    border-radius: 40px;
+    padding: 9px 10px;
+}
+nav li{
+    font-size: 18px;
+    padding-right: 20px;
+    font-family: sans-serif;
+}
+nav ul li a::before{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: red;
+    border-radius: 60px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.6s;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: -6.3px;
+    border-radius: 60px;
+    transition: 0.6s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+nav i{
+    font-size: 20px;
+    transform: translateY(-1px);
+    padding-right: 3px;
+    color: yellow;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px;
+    margin: auto 20px;
+    position: relative;
+    z-index: 1;
+}
+header img{
+    height: 60px;
+    width: 60px;
+    margin: auto 2px;
+    border-radius: 100%;
+    border: 3px  solid;
+    border-width: transparent;
+    transition: 2s;
+}
+header img:hover{
+    border-color: red;
+    border-width: 100%;
+}
+header a button{
+    background-color: rgb(226, 185, 0);
+    font-weight: 600;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 17px;
+    border: rgb(226, 185, 0) 4px solid;
+    border-style: ridge;
+    border-radius: 20px;
+    transition: 0.6s;
+}
+header a button:hover{
+    background-color: transparent;
+    color: yellow;
+}
+/*-------------- navbar end ---------------*/
+
+/*-------------Home----------------------*/
+#home{
+    width: auto;
+    height: 100vh;
+    position: relative;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#home .hp{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 165px;
+    position: relative;
+    z-index: 5;
+}
+.back-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#main-header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #03a9f4;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+.hp img{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    border-width: 3px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.hp img:hover{
+    border: red 3px solid;
+}
+.hp h2{
+    width: auto;
+    color:aliceblue;
+    font-size: 3em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 6px;
+    word-spacing: 3px;
+    transition: 0.6s;
+}
+.hp h2:hover{
+    width: auto;
+    -webkit-text-stroke: #fff 1px;
+    color: transparent;
+    transform: scale(1.2);
+}
+.hp h1{
+    color: aliceblue;
+    text-shadow: 3px 4px #333;
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Suez One', serif;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+}
+.hp h1 span{
+    color: yellow;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+}
+.hp h3{
+    font-family: 'Rokkitt', serif;
+    font-size: 1.7em;
+    text-decoration: underline red 2px;
+    color:beige;
+    padding-bottom: 3px;
+    margin-top: -10px;
+    position: relative;
+    letter-spacing: 1px;
+}
+.hp p{
+    font-family: sans-serif;
+    font-size: 1.1em;
+    color:azure;
+    margin: 5px 30px;
+}
+.hp p strong{
+    color: rgb(57, 235, 57);
+    font-weight: bolder;
+    font-size: larger;
+    letter-spacing: 1px;
+}
+#main-header{
+    position: relative;
+}
+nav .sen{
+    display: none;
+}
+#home button{
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #fff;
+    border-color: red;
+    font-size: x-large;
+    font-weight: 600;
+    position: relative;
+    transition: 0.6s;
+}
+#home button:hover{
+    background-color: red;
+}
+#home button::before{
+    content: '';
+    width: 22px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+}
+#home button::after{
+    content: '';
+    width: 22px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+}
+#home .overview{
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+.ads h4{
+    background-color: rgba(255, 255, 255, 0.616);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-style: italic;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 5px;
+}
+.ads h4 span{
+    color: red;
+}
+/*--------------------End home-------*/
+/*------------showercase---------*/
+
+.showercase{
+    /*background-color: rgb(39, 8, 175);*/
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/SHW-1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 20px 100px;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+.showercase .case{
+    font-size: 20px;
+}
+.showercase img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+}
+.showercase .img-2 img{
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    width: 210px;
+    height: 150px;
+    animation-name: certificate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 5s;
+}
+@keyframes certificate{
+    0% { scale: 0;}
+    25% { scale: 20px;}
+    0% { scale: 0;}
+    0% { scale: 20px;}
+    0% { scale: 0;}
+}
+.showercase .case h3{
+    font-family: 'Crete Round', serif;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+.showercase .case ul{
+    list-style: circle;
+}
+.showercase .case .circle{
+    margin: 10px;
+    background-color: red;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: fit-content;
+    animation-name: circle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes circle{
+    0% { transform: translate(0);}
+    50% { transform: translate(35px);}
+    100% { transform: translate(0);}
+}
+.showercase .case .circle h4{
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.showercase .case .circle p{
+    font-family: sans-serif;
+}
+
+
+/*---------------end showercase----------*/
+/*-------------------PROJECT-------------*/
+#project{
+    background-color: rgb(48, 51, 231);
+    display: block;
+    margin: 0;
+    padding: 25px 40px;
+}
+#project .main-icon{
+    text-align: center;
+    font-size: 35px;
+    background-color: rgb(0, 0, 209);
+    color: #fff;
+    margin: -25px -40px;
+    margin-top: -22px;
+    margin-bottom: 3px;
+}
+.main-icon .fa-chalkboard-user{
+    font-size: 50px;
+    border-radius: 100%;
+    border-color: #fff;
+    border-width: 2px;
+    margin: 30px;
+    padding: 5px;
+}
+#project .head-project{
+    display: flex;
+    gap: 19px;
+    font-size: large;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: antiquewhite;
+    color: rgb(0, 0, 150);
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.head-project .fa-file-pen{
+    font-size: 25px;
+    transform: translateY(4.5px);
+}
+#project .type-list{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    justify-items: flex-start;
+    margin-top: -10px;
+}
+.type-list .list{
+    width: 250px;
+    height: auto;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 11px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.type-list .list:hover{
+    background-color: bisque;
+    box-shadow: 2px 2px 3px rgb(145, 145, 145);
+    transform: translateY(-5px);
+}
+.type-list .list h3{
+    color: rgb(25, 25, 180);
+    font-family: 'Crete Round', serif;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    transform: translateX(-18px);
+}
+.type-list .list h3 .fa-circle{
+    font-size: small;
+    transform: translateY(-2px);
+    color: rgb(0, 0, 158);
+}
+.type-list .list ul{
+    list-style-image: url(./Images/blue-tick.png);
+    size: 5px 5px;
+}
+.type-list .list li{
+    color: #333;
+}
+#project .mission{
+    display: flex;
+    justify-content: center;
+    background-color: #231955;
+    color: #fff;
+    padding: 20px;
+    margin: -25px -40px;
+}
+.mission .required{
+    background-color: black;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 50px;
+    cursor: pointer;
+}
+.mission .required h3{
+    font-family: 'Crete Round', serif;
+    color: rgb(255, 166, 0);
+    padding-bottom: 6px;
+    word-wrap: nowrap;
+    transition: 0.5s;
+}
+.mission .required h3:hover{
+    color: rgb(0, 238, 255);
+}
+.required ol li{
+    list-style-image: url(./Images/blue-tick.png);
+    padding-bottom: 3px;
+    border-bottom: dotted 3px;
+    margin-bottom: 3px;
+    border-color: rgb(179, 179, 179);
+    transition: 0.5s;
+}
+.required ol li:hover{
+    color: #03a9f4;
+}
+
+
+/*-------------------END-PROJECT-------------*/
+/*-----------------service----------------*/
+
+#service{
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#service .mainicon{
+    background-color: blue;
+    text-align: center;
+}
+#service .mainicon i{
+    font-size: 65px;
+    color: #fff;
+    padding: 25px;
+}
+#service .qetc-service{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 20px;
+}
+#service .qetc-service .main-list{
+    background-color: rgb(223, 223, 223);
+}
+.qetc-service .main-list h3{
+    background-color: #d1d1d1;
+    font-family: 'Do Hyeon', sans-serif;
+    color: rgb(23, 23, 160);
+    margin-bottom: 6px;
+    margin-top: 2px;
+    font-size: 35px;
+    text-align: center;
+}
+.qetc-service .main-list ul{
+    padding-left: 35px;
+    list-style-image: url(./Images/blue-tick.png);
+}
+#service .universities{
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgb(211, 211, 211); 
+
+}
+#service .universities .partners{
+    background-color: rgb(223, 223, 223); 
+    width: 100%;  
+}
+#service .universities .partners h3{
+    width: 100%;
+    background-color: #d1d1d1;
+    font-family: 'Do Hyeon', sans-serif;
+    color: rgb(23, 23, 160);
+    margin-bottom: 6px;
+    padding: 10px;
+    font-size: 45px;
+    text-align: center;
+}
+#service .universities .partners ol{
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+#service .universities .partners ol .a1 img{
+    transform: scale(0.5);
+    transform: translateY(20px);
+}
+#service .universities .partners ol .a4 img{
+    transform: scale(0.5);
+    transform: translateY(20px);
+}
+#service .universities .partners ol .a6 img{
+    transform: scale(0.5);
+    transform: translateY(30px);
+}
+#service .universities .partners ol .a7 img{
+    transform: scale(0.5);
+    transform: translateY(30px);
+}
+#service .universities .partners ol .a9 img{
+    transform: scale(0.5);
+}
+#service .universities .partners ol .a11 img{
+    transform: scale(0.5);
+}
+#service .universities .partners ol .a12 img{
+    transform: scale(0.5);
+}
+#service .universities .partners ol .a14 img{
+    transform: scale(0.5);
+}
+#service .universities .partners ol li a{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    transition: 0.5s;
+}
+#service .universities .partners ol li a img{
+    transform: scale(0.4);
+}
+
+#service .universities .partners li a:hover{
+    color: rgb(209, 0, 0);
+}
+
+
+#service .last-sect{
+    width: fit-content;
+    background-color: rgb(231, 1, 1);
+    padding: 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-color: red;
+    border-width: 6px;
+    border-style:groove;
+}
+
+
+/*--------------- end service_----------*/
+/*---------------- VISA --------------*/
+
+#visa{
+    background-color: #fff;
+}
+.visa{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.visa .visa-logo{
+    text-align: center;
+    background-color: blue;
+}
+.visa .visa-logo i{
+    font-size: 65px;
+    color: #fff;
+    padding: 25px; 
+}
+.visa .visa-list{
+    background-color: transparent;
+    color: rgb(20, 20, 20);
+}
+.visa .visa-list h2{
+    text-align: center;
+    background-color: transparent;
+    color: rgb(15, 15, 161);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 27px;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+.visa .visa-list ul{
+    padding-left: 35px;
+    padding-right: 5px;
+    list-style-image: url(./Images/blue-tick.png);
+    flex-wrap: nowrap;
+}
+.visa .visa-list ul li{
+    flex-wrap: wrap;
+}
+.visa .decor{
+    margin: 10px;
+    width: fit-content;
+    background-color: transparent;
+    padding: 15px;
+    border: #333 4px dotted;
+    border-spacing: 3px;
+    border-radius: 30px;
+}
+.visa .decor h2{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+    color: rgb(22, 22, 22);
+    text-align: center;
+}
+.visa .decor h2::first-letter{
+    font-style: italic;
+    font-size: 45px;
+    color: #03a9f4;
+}
+.visa .decor h3{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+    color: rgb(22, 22, 22);
+    text-align: center;
+}
+.visa .decor ol{
+    padding-left: 35px;
+    color:#333;
+}
+
+
+/*---------------- END  VISA --------------*/
+/*-------------- REVIEW------------------*/
+
+#review
+{
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+}
+#review .header
+{
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url(./Images/header-review.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center center;
+    color: whitesmoke;
+}
+#review .header h2
+{
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 50px;
+    padding-top: 200px;
+    transition: 0.5s;
+}
+#review .header h2:hover
+{
+    -webkit-text-stroke: white 0.3px;
+    color: transparent;
+    transform: scale(1.1);
+}
+#review .header h2 span:hover
+{
+    -webkit-text-stroke: rgb(255, 13, 13) 1px;
+}
+.review
+{
+    margin: 10px 30px;
+    display: grid;
+    gap: 45px;
+    grid-auto-flow: column;
+    /*grid-auto-columns: 40%;*/
+
+    overflow-x: scroll;
+}
+.review::-webkit-scrollbar
+{
+    background-color: transparent;
+    height: 7px;
+}
+.review::-webkit-scrollbar-thumb
+{
+    background-color:  rgba(0, 0, 0, 0.3);
+    width: 7px;
+    border-radius: 25px;
+}
+.review .student
+{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: #333 1px solid;
+    border-radius: 20px;
+}
+.student img
+{
+    width: 240px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.student h3
+{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+
+    overflow: scroll;
+}
+.student h3::-webkit-scrollbar
+{
+    width: 0;
+}
+.student p
+{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+
+    overflow: scroll;
+}
+.student p::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: transparent;
+}
+.student p::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    border-radius: 25px;
+    background-color: #231955;
+}
+
+/*-------------- END REVIEW------------------*/
+/*---------------- CONTACT ---------------*/
+
+#contact{
+    background-color: #fff;
+    margin: 0;
+}
+#contact h2{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color:#231955;
+}
+#contact h1{
+    color: yellow;
+    font-family: 'Do Hyeon', sans-serif;
+    padding-bottom: 10px;
+}
+#contact .container{
+    display: block;
+}
+#contact .container .contact-up{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+#contact .container .contact-up .person{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.person img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.person h3{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Do Hyeon', sans-serif;
+    color: #025dd4;
+}
+.contact-down{
+    display: flex;
+    background-color: #231955;
+    padding: 25px;
+    color: #d2f2ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact-down .contact-left{
+    flex-basis: 40%;
+}
+.contact-down .contact-right{
+    flex-basis: 60%;
+}
+.contact-left .download{
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin: 12px 0;
+
+}
+.contact-left .download a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: rgb(226, 192, 0);
+    padding: 7px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.contact-left .download a:hover{
+    transform: scale(1.2);
+    color: red;
+}
+.contact-left p i{
+    color: yellow;
+}
+.contact-left .social-icon i{
+    margin: 5px;
+    padding: 3px;
+    color: yellow;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.contact-left .social-icon i:hover{
+    transform: scale(1.2);
+    color: red;
+}
+
+.contact-right form{
+    background-color: #06283d;
+    color: #dff6ff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+.contact-right form label{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1000;
+    outline: none;
+    margin-bottom: 3px;
+}
+.contact-right form input{
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px #d1d1d1 solid;
+}
+.contact-right form textarea{
+    background-color: transparent;
+    border: #d1d1d1 1px dotted;
+    border-radius: 10px;
+    margin: 7px 0;
+    padding: 15px;
+    width: 100%;
+}
+.contact-right form .send{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+}
+.contact-right form .send .submit{
+    width: 40%;
+    height: auto;
+    padding: 4px;
+    font-size: 15px;
+    background-color: #1363df;
+    border-radius: 10px;
+    border: none;
+    color: #dff6ff;
+    transition: 0.5s;
+}
+.contact-right form .send .submit:hover{
+    background-color: green;
+}
+#msg
+{
+    color: yellow;
+}
+
+/*---------------- END CONTACT ---------------*/
+/*-----------  ABOUT -----------*/
+
+#about
+{
+    background-color: #333;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+.footer
+{
+    display: block;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 25px;
+    padding: 10px;
+}
+.footer .header h2 img
+{
+    width: 200px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.footer .header h3
+{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+    color: #03a9f4;
+    font-weight: 900;
+    text-align: left;
+}
+.footer .header p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #919191;
+    text-align: left;
+}
+.footer .header p span
+{
+    font-weight: 600;
+    color: #aaa9a9;
+    font-size: 12.5px;
+}
+#about .copyright
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #aaa9a9;
+    padding: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    justify-items: center;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.whatsapp
+{
+    text-align: center;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 5px;
+    left: 5px;
+    background-color: green;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color:  green;
+    border-style: ridge;
+    z-index: 10;
+}
+.kando
+{
+    position: relative;
+}
+.whatsapp a
+{
+    position: absolute;
+    color: white;
+}
+.whatsapp a i
+{
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -13px;
+    font-size: 33px;
+}
+.whatsapp a i:hover
+{
+    color: yellow;
+}
+
+@media only screen and (max-width: 600px){
+
+
+    nav .sen{
+        display: block;
+    }
+
+    .hp h3::before{
+        width: 305px;
+    }
+    .hp h3{
+        font-size: 1.1em;
+        margin: auto 20px;
+
+    }
+    .hp p{
+        font-size: 0.8em;
+    }
+    .hp img{
+        width: 50px;
+        height: 50px;
+    }
+    .hp h2{
+        font-size: 2em;
+    }
+    .hp h1{
+        font-size: 2.6em;
+        margin: auto 20px;
+        font-family: 'Suez One', serif;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+    }
+    #home .hp{
+        padding-top: 185px;
+        z-index: -1;
+    }
+    header img{
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top: 15px;
+    }
+    nav li{
+        font-size: 15px;
+    }
+    nav i{
+        font-size: 17px;
+    }
+    header a button{
+        position: absolute;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px;
+        right: 40px;
+        top: 20px;
+        z-index: -1;
+    }
+    .back-video{
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    nav ul{
+        position: fixed;
+        background-color: blue;
+        top: 0;
+        right: -180px;
+        width: 180px;
+        height: 100vh;
+        padding-top: 50px;
+        border-radius: 0;
+        display: block;
+        text-align: left;
+        transition: 0.8s;
+    }
+    nav ul li{
+        font-size: 18px;
+        margin: 20px 3px ;
+        padding: 5px 11px;
+        transition: 0.9s;
+    }
+    nav ul li:hover{
+        background-color: rgba(51, 51, 51, 0.444);
+        border-radius: 10px;
+        padding: 5px 11px;
+    }
+    nav ul li a::before{
+        display: none;
+    }
+    nav ul li a::after{
+        display: none;
+    }
+    nav .fa-xmark{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    nav .fa-xmark:hover{
+        color: rgb(217, 14, 14)(216, 14, 14);
+    }
+    nav .fa-bars{
+        position: absolute;
+        right: -4px;
+        top: 26px;
+        font-size: 23px;
+        cursor: pointer;
+        z-index: -1;
+    }
+    .ads h4{
+        font-family: sans-serif;
+        font-size: 0.8em;
+        text-align: right;
+        width: fit-content;
+        padding: 4px 5px;
+        margin-left: 60px;
+    }
+    /*------------showercase---------*/
+
+    .showercase{
+        background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/SHW-2.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 20px ;
+        color: #fff;
+        display: flex;
+        position: relative;
+    }
+    .showercase .case{
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .showercase img{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    /*---------------end showercase----------*/
+    /*----------------project----------*/
+
+    #project .type-list{
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+    }
+
+    .mission .required h3{
+        font-size: larger;
+        font-family: 'Crete Round', serif;
+
+    }
+    .required ol li{
+        font-size: medium;
+        transition: 0.5s;
+    }
+    .required ol li:hover{
+        color: #03a9f4;
+    }
+    .type-list .list{
+        width: 400px;
+    }
+
+
+    /*-----------------end project---------*/
+    /* service */
+    #service .qetc-service .main-list{
+        background-color: rgb(223, 223, 223);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
+    .qetc-service .main-list ul{
+        padding-left: 25px;
+    }
+    #service .universities .partners{
+        background-color: rgb(223, 223, 223);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
+    #service .universities .partners h3{
+        font-size: 25px;
+    }
+    #service .universities .partners ol{
+        padding-left: 25px;
+    }
+    #service .universities .partners ol .a1 img{
+        transform: scale(0.5);
+        transform: translateY(20px);
+    }
+    #service .universities .partners ol .a4 img{
+        transform: scale(0.5);
+        transform: translateY(20px);
+    }
+    #service .universities .partners ol .a5 img{
+        transform: scale(0.6);
+        width: 250px;
+        height: auto;
+    }
+    #service .universities .partners ol .a6 img{
+        transform: scale(0.5);
+        transform: translateY(30px);
+    }
+    #service .universities .partners ol .a7 img{
+        transform: scale(0.5);
+        transform: translateY(30px);
+        width: 250px;
+        height: auto;
+    }
+    #service .universities .partners ol .a8 img{
+        transform: scale(0.6);
+        width: 250px;
+        height: auto;
+    }
+    #service .universities .partners ol .a9 img{
+        transform: scale(0.5);
+    }
+    #service .universities .partners ol .a10 img{
+        transform: scale(0.6);
+        width: 250px;
+        height: auto;
+    }
+    #service .universities .partners ol .a11 img{
+        transform: scale(0.5);
+    }
+    #service .universities .partners ol .a12 img{
+        transform: scale(0.5);
+    }
+    #service .universities .partners ol .a13 img{
+        transform: scale(0.6);
+        width: 250px;
+        height: auto;
+    }
+    #service .universities .partners ol .a14 img{
+        transform: scale(0.5);
+    }
+
+    /* end service */
+    /* visa */
+    #visa{
+        width: 100%;
+    }
+    .visa{
+        display: block;
+    }
+
+
+    /* end visa */
+    /*-----REVIEW----*/
+
+    #review .header h2
+    {
+        font-size: 30px;
+        padding-top: 200px;
+    }
+    #review .header h2:hover
+    {
+        -webkit-text-stroke: white 0.3px;
+        color: transparent;
+    }
+    .review
+    {
+        margin: 5px 10px;
+        display: grid;
+        gap: 35px;
+        grid-auto-flow: column;
+        /*grid-auto-columns: 40%;*/
+
+        overflow-x: scroll;
+    }
+    .review .student
+    {
+        width: 230px;
+    }
+    .student img
+    {
+        width: 220px;
+        height: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /*------ END REVIEW-----*/
+    /* contact */
+    #contact .container .contact-up{
+        display: block;
+    }
+    .contact-down{
+        display: block;
+        padding: 25px;
+    }
+    .contact-down .contact-left{
+        margin-bottom: 10px;
+    }
+    .contact-left .download{
+        font-size: 14px;
+    }
+    .contact-right form{
+        margin-top: 18px;
+    }
+
+
+
+    /* end contact*/
+    /*  about  */
+
+    #about .copyright
+    {
+        font-size: 8px;
+    }
+
+    /* end about  */
+
+}
+
+

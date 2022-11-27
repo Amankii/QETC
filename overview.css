@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(253, 255, 110);
+    background-image: url(./Images/QETC-LOGO-3.png);
+    background-size: 60px 60px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.overview{
+    margin: 50px 35px;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.5) rgba(255,255,255,0.5));
+    backdrop-filter: blur(3px);
+    border-radius: 35px;
+    padding: 30px;
+    color: #333;
+    top: 25%;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    position: relative;
+    animation-name: over;
+    animation-duration: 2s;
+     
+}
+@keyframes over{
+    0% {left: -1000px;}
+    100% {left: 0;}
+}
+.overview h2{
+    font-family: 'Suez One', serif;
+    font-size: x-large;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    color: rgb(12, 0, 182);
+}
+.overview p{
+    padding: 15px;
+}
+.back{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 500;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 19, 190);
+    border-radius: 15px;
+}
+a{
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+a:hover{
+    border: #333 1px solid;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .overview{
+        font-size: medium;
+        margin: 30px 25px;
+        top: 5px;
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+    }
+    .overview h2{
+        font-family: 'Suez One', serif;
+        font-size: large;
+        letter-spacing: 1px;
+    }
+    .overview p{
+        font-size:small;
+    }
+    .back{
+        font-size: small;
+        left: 5px;
+        top: 5px;
+        position: absolute;
+    }
+}
